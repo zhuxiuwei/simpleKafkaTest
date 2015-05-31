@@ -51,7 +51,7 @@ public class SimpleHLConsumer {
 				int flushCount = 5, count = 0;
 				while (consumerIte.hasNext()){
 					msg = new String(consumerIte.next().message());
-					fw.write("!" + msg + "\r\n");
+					fw.write(msg + "\r\n");
 					if(count == flushCount){
 						fw.flush();
 						count = 0;
@@ -69,7 +69,7 @@ public class SimpleHLConsumer {
 	}
 
 	public static void main(String[] args) {
-		String zooKeeper = "10.86.164.32:2181";
+		String zooKeeper = args[0];	//example1: localhost:2181   example2: CO3SCH010080328:2181
 		String groupId = "testsldsf";
 		String topic = "kafkatopic";
 		SimpleHLConsumer simpleHLConsumer = new SimpleHLConsumer(zooKeeper,
