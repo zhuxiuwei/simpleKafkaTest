@@ -1,1 +1,0 @@
-%~dp0kafka_2.10-0.8.2.1\bin\windows\kafka-console-consumer.bat --zookeeper localhost:2181 --topic kafkatopic
