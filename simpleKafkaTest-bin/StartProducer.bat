@@ -1,0 +1,1 @@
+%~dp0kafka_2.10-0.8.2.1\bin\windows\kafka-console-producer.bat --broker-list localhost:9092 --topic kafkatopic
